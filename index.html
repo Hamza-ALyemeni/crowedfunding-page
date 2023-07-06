@@ -134,6 +134,21 @@
     justify-content: space-evenly;
     flex-direction: row;
   }
+
+  .campaign-progress .results .budget{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campaign-progress .results .sporters{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campaign-progress .results .days-left{
+    display: flex;
+    flex-direction: column;
+  }
   /* end campaign-progress */
    </style>
 </head>
@@ -162,15 +177,15 @@
 
   <section class="campaign-progress">
     <div class="results">
-      <div>
-        $<span>89,914</span>
+      <div class="budget">
+        <span><span>$</span>89,914</span>
         <span> of $100,000 backed </span>
       </div>
-      <div>
+      <div class="sporters">
         <span>5,007</span>
         <span>total backers</span>
       </div>
-      <div>
+      <div class="days-left">
         <span>56</span>
         <span>days left</span>
       </div>
