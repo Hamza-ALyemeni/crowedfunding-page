@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Crowdfunding product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing:border-box;
+      box-sizing:border-box;
+    }
+    body{
+      margin: 0px;
+      font-family: 'Commissioner', sans-serif;
+    }
+    /* start header */
+    header{
+      background-image: url('images/image-hero-desktop.jpg');
+      background-repeat: no-repeat;
+      height: 400px;
+    }
+    .container{
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1019px;
+    }
+        
+    header .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header ul{
+      display: inline-block;
+      list-style: none;
+      color:white;
+      font-size: 16px;
+      position: relative;
+      left: 100px;
+    }
+    header ul li{
+      display: inline-block;
+      list-style: none;
+      margin-right: 18px;  
+    }
+  /* end header */
+  /* project section */
+  .project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 86px;
+    width: 720px;
+    left: 350px;
+    z-index: 9999;
+    background: white;
+    border-radius: 10px;
+    height: 250px;
+    border: 1px solid #eeee;
+  }
+  .project::before{
+    content: url('images/logo-mastercraft.svg');
+    position: relative;
+    bottom: 30px;
+  }
+  section .heading{
+
+  }
+  section .project-description{
+    color:  hsl(0, 0%, 48%);
+    position: relative;
+    bottom: 20px;
+    font-size: 14px;
+  }
+  section .btn-and-icon .btn{
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    padding: 13px;
+    border-radius: 25px;
+    width: 150px;
+    border: 1px solid white;
+    font-weight: 700;
+    font-size: 11px;
+  }
+  section .btn-and-icon .icon{
+    font-size: 13px;
+    background-color: #f6f6f6;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 20px;
+    width: 125px;
+    text-align: right;
+    color: hsl(0, 0%, 48%);
+    font-weight: 700;
+  }
+  section .btn-and-icon img{
+    height: 40px;
+    position: absolute;
+  } 
+  section .btn-and-icon{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* end project section */
+  /* start campaign-progress */
+  .campaign-progress{
+    width: 720px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 86px;
+    width: 720px;
+    left: 350px;
+  }
+  .campaign-progress .results{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  /* end campaign-progress */
+   </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img class="logo" src="images/logo.svg" alt="logo">
+      <ul>
+        <li>About</li>
+        <li>Discover</li>
+        <li>Get Started</li>
+      </ul>
+    </div>
+  </header>
+  <section class="project">
+    <h1 class="heading">Mastercraft Bamboo Monitor Riser</h1> 
+    <p class="project-description">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+    <div class="btn-and-icon">
+      <button class="btn">Back this project</button>
+      <div>
+        <img src="images/icon-bookmark.svg" alt="bookmark">
+        <span class="icon">Bookmark</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="campaign-progress">
+    <div class="results">
+      <div>
+        $<span>89,914</span>
+        <span> of $100,000 backed </span>
+      </div>
+      <div>
+        <span>5,007</span>
+        <span>total backers</span>
+      </div>
+      <div>
+        <span>56</span>
+        <span>days left</span>
+      </div>
+    </div>
+    <progress></progress>
+  </section>
+
+  About this project
+
+  The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+  to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
+  your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
+
+  Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+  to allow notepads, pens, and USB sticks to be stored under the stand.
+  
+  Bamboo Stand
+  Pledge $25 or more
+  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+  you’ll be added to a special Backer member list.
+  101 left
+  Select Reward
+
+  Black Edition Stand
+  Pledge $75 or more
+  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+  member list. Shipping is included.
+  64 left
+  Select Reward
+
+  Mahogany Special Edition
+  Pledge $200 or more
+  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+  to our Backer member list. Shipping is included.
+  0 left
+  Out of Stock
+
+  <!-- Selection modal start -->
+
+  Back this project
+  Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+
+  Pledge with no reward
+  Choose to support us without a reward if you simply believe in our project. As a backer, 
+  you will be signed up to receive product updates via email.
+
+  Bamboo Stand
+  Pledge $25 or more
+  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+  you’ll be added to a special Backer member list.
+  101 left
+
+  <!-- Selected pledge start -->
+  Enter your pledge
+  $25
+  Continue
+  <!-- Selected pledge end -->
+
+  Black Edition Stand
+  Pledge $75 or more
+  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+  member list. Shipping is included.
+  64 left
+
+  <!-- Selected pledge start -->
+  Enter your pledge
+  $75
+  Continue
+  <!-- Selected pledge end -->
+
+  Mahogany Special Edition
+  Pledge $200 or more
+  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+  to our Backer member list. Shipping is included.
+  0 left
+
+  <!-- Selected pledge  start -->
+  Enter your pledge
+  $200
+  Continue
+  <!-- Selected pledge end -->
+
+  <!-- Selection modal end -->
+
+  <!-- Success modal start -->
+
+  Thanks for your support!
+  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+  an email once our campaign is completed.
+  Got it!
+
+  <!-- Success modal end -->
+</body>
+</html>
