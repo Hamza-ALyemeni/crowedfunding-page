@@ -7,8 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Crowdfunding product page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Commissioner:wght@300;500;700&display=swap" rel="stylesheet">  <title>Frontend Mentor | Crowdfunding product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -78,9 +79,7 @@
     position: relative;
     bottom: 30px;
   }
-  section .heading{
-
-  }
+  
   section .project-description{
     color:  hsl(0, 0%, 48%);
     position: relative;
@@ -128,6 +127,10 @@
     bottom: 86px;
     width: 720px;
     left: 350px;
+    background: white;
+    border-radius: 10px;
+    height: 250px;
+    border: 1px solid #eeee;
   }
   .campaign-progress .results{
     display: flex;
@@ -135,20 +138,35 @@
     flex-direction: row;
   }
 
-  .campaign-progress .results .budget{
+  .campaign-progress .results .budget ,
+  .campaign-progress .results .sporters ,
+  .campaign-progress .results .days-left
+  {
     display: flex;
     flex-direction: column;
   }
 
-  .campaign-progress .results .sporters{
-    display: flex;
-    flex-direction: column;
+  .campaign-progress .results div span:first-child{
+    font-size: 29px;
+    font-weight: 700;
   }
 
-  .campaign-progress .results .days-left{
-    display: flex;
-    flex-direction: column;
+  .campaign-progress .results div span:nth-child(2){
+    font-size: 14px;
+    margin-top: 10px;
+    color: hsl(0, 0%, 48%);
   }
+
+  .campaign-progress progress {
+    width: 544px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 115px;
+    margin-top: 26px;
+  }
+  
   /* end campaign-progress */
    </style>
 </head>
@@ -178,7 +196,7 @@
   <section class="campaign-progress">
     <div class="results">
       <div class="budget">
-        <span><span>$</span>89,914</span>
+        <span>$<span>89,914</span></span>
         <span> of $100,000 backed </span>
       </div>
       <div class="sporters">
@@ -190,7 +208,7 @@
         <span>days left</span>
       </div>
     </div>
-    <progress></progress>
+    <progress value="70" max="100"></progress>
   </section>
 
   About this project
