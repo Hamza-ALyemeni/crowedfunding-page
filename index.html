@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Commissioner:wght@300;500;700&display=swap" rel="stylesheet">  <title>Frontend Mentor | Crowdfunding product page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Commissioner:wght@300;500;700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Crowdfunding product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    *{
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing:border-box;
-      box-sizing:border-box;
+    .attribution {
+      font-size: 11px;
+      text-align: center;
     }
-    body{
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
       margin: 0px;
       font-family: 'Commissioner', sans-serif;
     }
+
     /* start header */
-    header{
+    header {
       background-image: url('images/image-hero-desktop.jpg');
       background-repeat: no-repeat;
       height: 400px;
       object-fit: cover;
     }
-    .container{
+
+    .container {
       padding-left: 15px;
       padding-right: 15px;
       padding-top: 28px;
@@ -40,167 +54,298 @@
       margin-right: auto;
       width: 1019px;
     }
-        
-    header .container{
+
+    header .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    header ul{
+
+    header ul {
       display: inline-block;
       list-style: none;
-      color:white;
+      color: white;
       font-size: 16px;
       position: relative;
       left: 100px;
     }
-    header ul li{
+
+    header ul li {
       display: inline-block;
       list-style: none;
-      margin-right: 18px;  
+      margin-right: 18px;
     }
-  /* end header */
-  /* project section */
-  .project{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    bottom: 86px;
-    width: 720px;
-    left: 350px;
-    z-index: 9999;
-    background: white;
-    border-radius: 10px;
-    height: 250px;
-    border: 1px solid #eeee;
-  }
-  .project::before{
-    content: url('images/logo-mastercraft.svg');
-    position: relative;
-    bottom: 30px;
-  }
-  
-  section .project-description{
-    color:  hsl(0, 0%, 48%);
-    position: relative;
-    bottom: 20px;
-    font-size: 14px;
-  }
-  section .btn-and-icon .btn{
-    background-color: hsl(176, 50%, 47%);
-    color: white;
-    padding: 13px;
-    border-radius: 25px;
-    width: 150px;
-    border: 1px solid white;
-    font-weight: 700;
-    font-size: 11px;
-  }
-  section .btn-and-icon .icon{
-    font-size: 13px;
-    background-color: #f6f6f6;
-    display: inline-block;
-    padding: 12px;
-    border-radius: 20px;
-    width: 125px;
-    text-align: right;
-    color: hsl(0, 0%, 48%);
-    font-weight: 700;
-  }
-  section .btn-and-icon img{
-    height: 40px;
-    position: absolute;
-  } 
-  section .btn-and-icon{
-    width: 550px;
-    display: flex;
-    justify-content: space-between;
-  }
-  /* end project section */
-  /* start campaign-progress */
-  .campaign-progress{
-    width: 720px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    bottom: 86px;
-    width: 720px;
-    left: 350px;
-    background: white;
-    border-radius: 10px;
-    height: 250px;
-    border: 1px solid #eeee;
-    margin-top: 20px;
-  }
-  .campaign-progress .results{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
 
-  .campaign-progress .results .budget ,
-  .campaign-progress .results .sporters ,
-  .campaign-progress .results .days-left
-  {
-    display: flex;
-    flex-direction: column;
-  }
+    /* end header */
+    /* project section */
+    .project {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      bottom: 86px;
+      width: 720px;
+      left: 350px;
+      z-index: 9999;
+      background: white;
+      border-radius: 10px;
+      height: 250px;
+      border: 1px solid #eeee;
+    }
 
-  .campaign-progress .results .after{
-    height: 76px;
-    width: 1px;
-    background-color: #e2dfdfee;
-    position: relative;
-  }
+    .project::before {
+      content: url('images/logo-mastercraft.svg');
+      position: relative;
+      bottom: 30px;
+    }
 
-  .campaign-progress .results div span:first-child{
-    font-size: 29px;
-    font-weight: 700;
-  }
+    section .project-description {
+      color: hsl(0, 0%, 48%);
+      position: relative;
+      bottom: 20px;
+      font-size: 14px;
+    }
 
-  .campaign-progress .results div span:nth-child(2){
-    font-size: 14px;
-    margin-top: 10px;
-    color: hsl(0, 0%, 48%);
-  }
+    section .btn-and-icon .btn {
+      background-color: hsl(176, 50%, 47%);
+      color: white;
+      padding: 13px;
+      border-radius: 25px;
+      width: 150px;
+      border: 1px solid white;
+      font-weight: 700;
+      font-size: 11px;
+    }
 
-  .campaign-progress .progress-bar{
-    width: 609px;
-    height: 13px;
-    background-color: #eeee;
-    border-radius: 10px;
-    position: relative;
-    top: 27px;
-    left: 66px;
-  }
+    section .btn-and-icon .icon {
+      font-size: 13px;
+      background-color: #f6f6f6;
+      display: inline-block;
+      padding: 12px;
+      border-radius: 20px;
+      width: 125px;
+      text-align: right;
+      color: hsl(0, 0%, 48%);
+      font-weight: 700;
+    }
 
-  .campaign-progress .progress-bar .progress{
-    width: calc(609px - 19%);
-    height: 13px;
-    background-color: hsl(176, 50%, 47%);
-    border-radius: 10px;
-  }
-  
-  /* end campaign-progress */
-  /* start about project section */
-  .about-project{
-    width: 720px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    left: 350px;
-    width: 720px;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid #eeee;
-    margin-top: 20px;
-  }
-  /* end about project section */
-   </style>
+    section .btn-and-icon img {
+      height: 40px;
+      position: absolute;
+    }
+
+    section .btn-and-icon {
+      width: 550px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* end project section */
+    /* start campaign-progress */
+    .campaign-progress {
+      width: 720px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      bottom: 86px;
+      width: 720px;
+      left: 350px;
+      background: white;
+      border-radius: 10px;
+      height: 250px;
+      border: 1px solid #eeee;
+      margin-top: 20px;
+    }
+
+    .campaign-progress .results {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+    }
+
+    .campaign-progress .results .budget,
+    .campaign-progress .results .sporters,
+    .campaign-progress .results .days-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campaign-progress .results .after {
+      height: 76px;
+      width: 1px;
+      background-color: #e2dfdfee;
+      position: relative;
+    }
+
+    .campaign-progress .results div span:first-child {
+      font-size: 29px;
+      font-weight: 700;
+    }
+
+    .campaign-progress .results div span:nth-child(2) {
+      font-size: 14px;
+      margin-top: 10px;
+      color: hsl(0, 0%, 48%);
+    }
+
+    .campaign-progress .progress-bar {
+      width: 609px;
+      height: 13px;
+      background-color: #eeee;
+      border-radius: 10px;
+      position: relative;
+      top: 27px;
+      left: 66px;
+    }
+
+    .campaign-progress .progress-bar .progress {
+      width: calc(609px - 19%);
+      height: 13px;
+      background-color: hsl(176, 50%, 47%);
+      border-radius: 10px;
+    }
+
+    /* end campaign-progress */
+    /* start about project section */
+    .about-project {
+      width: 720px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      left: 350px;
+      bottom: 74px;
+      width: 720px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #eeee;
+      margin-top: 10px;
+    }
+
+    .about-project .heading {
+      margin-top: 40px;
+      position: relative;
+      left: 60px;
+    }
+
+    .about-project .first-paragraph {
+      width: 556px;
+      position: relative;
+      left: 61px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: hsl(0, 0%, 48%);
+    }
+
+    .about-project .second-paragraph {
+      width: 556px;
+      position: relative;
+      left: 61px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: hsl(0, 0%, 48%);
+      margin-bottom: 30px;
+    }
+
+    .about-project .first-pledge,
+    .about-project .second-pledge,
+    .about-project .third-pledge {
+      width: 556px;
+      position: relative;
+      left: 61px;
+      border: 1px solid #eeee;
+      padding: 24px;
+      margin-bottom: 22px;
+      border-radius: 10px;
+    }
+    .about-project .third-pledge {
+      opacity: 0.4;
+    }
+    .about-project .first-pledge .title-and-price,
+    .about-project .second-pledge .title-and-price,
+    .about-project .third-pledge .title-and-price {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .about-project .first-pledge p,
+    .about-project .second-pledge p,
+    .about-project .third-pledge p{
+      font-size: 14px;
+      line-height: 1.8;
+      color: hsl(0, 0%, 48%);
+      margin-bottom: 20px;
+    }
+
+    .about-project .first-pledge .title-and-price span,
+    .about-project .second-pledge .title-and-price span ,
+    .about-project .third-pledge .title-and-price span{
+      position: relative;
+      top: 21px;
+      color: hsl(176, 50%, 47%);
+      font-size: 14px;
+    }
+
+    .about-project .first-pledge .pledge-left,
+    .about-project .second-pledge .pledge-left,
+    .about-project .third-pledge .pledge-left {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .about-project .first-pledge .pledge-left button ,
+    .about-project .second-pledge .pledge-left button {
+      background-color: hsl(176, 50%, 47%);
+      color: white;
+      padding: 13px;
+      border-radius: 25px;
+      width: 150px;
+      border: 1px solid white;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .about-project .third-pledge .pledge-left button {
+      background-color: hsl(0, 0%, 48%);
+      color: white;
+      padding: 13px;
+      border-radius: 25px;
+      width: 150px;
+      border: 1px solid white;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .about-project .first-pledge .pledge-number ,
+    .about-project .second-pledge .pledge-number ,
+    .about-project .third-pledge .pledge-number{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .about-project .first-pledge .pledge-number span:first-of-type ,
+    .about-project .second-pledge .pledge-number span:first-of-type ,
+    .about-project .third-pledge .pledge-number span:first-of-type{
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .about-project .first-pledge .pledge-number span:nth-child(2) ,
+    .about-project .second-pledge .pledge-number span:nth-child(2) ,
+    .about-project .third-pledge .pledge-number span:nth-child(2){
+      position: relative;
+      top: 8px;
+      left: 8px;
+      color: hsl(0, 0%, 48%);
+      font-size: 13px;
+    }
+
+    /* end about project section */
+  </style>
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -213,7 +358,7 @@
     </div>
   </header>
   <section class="project">
-    <h1 class="heading">Mastercraft Bamboo Monitor Riser</h1> 
+    <h1 class="heading">Mastercraft Bamboo Monitor Riser</h1>
     <p class="project-description">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
     <div class="btn-and-icon">
       <button class="btn">Back this project</button>
@@ -247,45 +392,66 @@
   </section>
 
   <section class="about-project">
-    <h2> About this project </h2>
-    <p>
-      The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
-      to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
+    <h3 class="heading"> About this project </h3>
+    <p class="first-paragraph">
+      The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
+      to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
       your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
     </p>
-    <p>
-      Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+    <p class="second-paragraph">
+      Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer
       to allow notepads, pens, and USB sticks to be stored under the stand.
     </p>
-    <div>
-      <h3>Bamboo Stand</h3>
-      <span>Pledge $25 or more</span>
+    <div class="first-pledge">
+      <div class="title-and-price">
+        <h3>Bamboo Stand</h3>
+        <span>Pledge $25 or more</span>
+      </div>
       <p>
-        You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+        You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
         you’ll be added to a special Backer member list.
       </p>
-      <div><span>101</span> left</div>
-      <button>Select Reward</button>
+      <div class="pledge-left">
+        <div class="pledge-number">
+          <span>101</span>
+          <span>left</span>
+        </div>
+        <button>Select Reward</button>
+      </div>
     </div>
-    <div>
-      <h3>Black Edition Stand</h3>
-      <span>Pledge $75 or more</span>
+    <div class="second-pledge">
+      <div class="title-and-price">
+        <h3>Black Edition Stand</h3>
+        <span>Pledge $75 or more</span>
+      </div>
       <p>
-        You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+        You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
         member list. Shipping is included.
       </p>
-      <div><span>64</span> left</div>
-      <button>Select Reward</button>
+      <div class="pledge-left">
+        <div class="pledge-number">
+          <span>64</span>
+          <span>left</span>
+        </div>
+        <button>Select Reward</button>
+      </div>
     </div>
-    <div>
-      <h3>Mahogany Special Edition</h3>
-      <span>Pledge $200 or more</span>
+    <div class="third-pledge">
+      <div class="title-and-price">
+        <h3>Mahogany Special Edition</h3>
+        <span>Pledge $200 or more</span>
+      </div>
       <p>
-        You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+        You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
         to our Backer member list. Shipping is included.
       </p>
-      <div><span>0</span> left</div>
-      <button>Out of Stock</button>   
+      <div class="pledge-left">
+        <div class="pledge-number">
+          <span>0</span>
+          <span>left</span>
+        </div>
+        <button>Out of Stock</button>
+      </div>
     </div>
   </section>
   <!-- Selection modal start -->
@@ -294,7 +460,7 @@
   Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
 
   Pledge with no reward
-  Choose to support us without a reward if you simply believe in our project. As a backer, 
+  Choose to support us without a reward if you simply believe in our project. As a backer,
   you will be signed up to receive product updates via email.
 
   Bamboo Stand
@@ -344,4 +510,5 @@
 
   <!-- Success modal end -->
 </body>
+
 </html>
