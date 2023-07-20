@@ -68,12 +68,14 @@
       font-size: 16px;
       position: relative;
       left: 100px;
+      font-weight: lighter;
     }
 
     header ul li {
       display: inline-block;
       list-style: none;
       margin-right: 18px;
+      cursor: pointer;
     }
 
     /* end header */
@@ -115,6 +117,11 @@
       border: 1px solid white;
       font-weight: 700;
       font-size: 11px;
+    }
+
+    section .btn-and-icon .btn:hover {
+      background-color: hsl(176, 72%, 28%);
+      cursor: pointer;
     }
 
     section .btn-and-icon .icon {
@@ -307,6 +314,12 @@
       font-size: 11px;
     }
 
+    .about-project .first-pledge .pledge-left button:hover ,
+    .about-project .second-pledge .pledge-left button:hover {
+      background-color: hsl(176, 72%, 28%);
+      cursor: pointer;
+    }
+
     .about-project .third-pledge .pledge-left button {
       background-color: hsl(0, 0%, 48%);
       color: white;
@@ -342,6 +355,10 @@
       font-size: 13px;
     }
 
+    .opacity{
+      opacity: 0.6;
+      cursor: pointer;
+    }
     /* end about project section */
   </style>
 </head>
@@ -362,7 +379,7 @@
     <p class="project-description">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
     <div class="btn-and-icon">
       <button class="btn">Back this project</button>
-      <div>
+      <div id="bookmarkId">
         <img src="images/icon-bookmark.svg" alt="bookmark">
         <span class="icon">Bookmark</span>
       </div>
@@ -510,5 +527,15 @@
 
   <!-- Success modal end -->
 </body>
-
+<script>
+  const bookmarkIcon = document.getElementById('bookmarkId');
+  const addOpacity = () => {
+    document.querySelector('.icon').classList.add('opacity')
+  };
+  const removeOpacity = () => {
+    document.querySelector('.icon').classList.remove('opacity')
+  };
+  bookmarkIcon.addEventListener('mouseover',addOpacity);
+  bookmarkIcon.addEventListener('mouseout',removeOpacity);
+</script>
 </html>
