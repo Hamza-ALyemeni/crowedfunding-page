@@ -380,7 +380,7 @@
     <div class="btn-and-icon">
       <button class="btn">Back this project</button>
       <div id="bookmarkId">
-        <img src="images/icon-bookmark.svg" alt="bookmark">
+        <img src="images/icon-bookmark.svg" alt="bookmarkIcon" id="bookmarkImage">
         <span class="icon">Bookmark</span>
       </div>
     </div>
@@ -535,7 +535,21 @@
   const removeOpacity = () => {
     document.querySelector('.icon').classList.remove('opacity')
   };
+  const bookMarked = () =>{
+    if (document.querySelector('.icon').innerHTML == 'bookmark') {
+      document.querySelector('.icon').innerHTML = 'bookmarked';
+      document.querySelector('.icon').style.width = '135px';
+      document.querySelector('.icon').style.color = 'hsl(176, 50%, 47%)';
+      document.querySelector('#bookmarkImage').src = 'images/icon-bookmark - Copy.svg';
+    }else {
+      document.querySelector('.icon').innerHTML = 'bookmark';
+      document.querySelector('.icon').style.width = '125px';
+      document.querySelector('.icon').style.color = 'hsl(0, 0%, 48%)';
+      document.querySelector('#bookmarkImage').src = 'images/icon-bookmark.svg';
+    }
+  };
   bookmarkIcon.addEventListener('mouseover',addOpacity);
   bookmarkIcon.addEventListener('mouseout',removeOpacity);
+  bookmarkIcon.addEventListener('click',bookMarked);
 </script>
 </html>
